@@ -1,0 +1,36 @@
+﻿body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: #eeeeee;
+
+}
+.footer {
+    padding: 20px;
+    background: #e0e0e0;
+}
+ol.nice-ol {
+  counter-reset: item;
+
+  list-style: none;
+}
+.nice-ol li {
+counter-increment: item;
+   margin-bottom: 5px;
+}
+.nice-ol li::before {
+   margin-right: 10px;
+   content: counter(item);
+   background: #404040;
+   border-radius: 100%;
+   color: white;
+    padding: 5px;
+    width: 1.3em;
+   text-align: center;
+   display: inline-block;
+}
+.nice-ol li div {
+    display: inline-table;
+}
+
+.inline-block {
+    display: inline-block
+}
