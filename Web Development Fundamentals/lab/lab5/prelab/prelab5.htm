@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		<title>Lab Manual 5</title>
+		<meta charset="utf-8">
+		<meta name="description" content="lab 5">
+		<meta name="keywords" content="lab, manual, prelab, html, css">
+		<meta name="author" content="">
+		<style>
+			body{
+			background-image:url(formbg.png);
+			}
+			
+			h2{
+				color:#660000;
+				font-size:125%;
+				font-style:italic;
+				font-family:arial;
+				margin:0px;
+			}
+			
+			.idSpan{
+				display: inline-block;
+				width: 75px;
+				margin: 5px;
+			}
+
+			#btn1{
+				margin-left: 150px;
+			}
+
+			h1{
+				text-align: right;
+				font-family: arial;
+				font-style:italic;
+			}
+
+			#links{
+				text-align: right;
+				font-size: 14px;
+			}
+
+			.indent{
+				margin-left: 85px;
+			}
+
+			select{
+				margin-bottom:30px;
+			}
+		</style>
+	</head>
+	<body>
+		<form action="index.html" method="POST" autocomplete"on"="">
+			<h1>Evergreen Valley College Survey</h1>
+			<div id="links">
+				<a href="mailto:webmaster@georgebrown.ca" id="webmaster">Email webmaster</a> |
+				<a href="#" id="evergreen">Evergreen Valley College Website</a>
+			</div>
+			<h2>Personal Information</h2><br>
+			<label for="student" name="name" style="font-weight:bold" class="idSpan">Name:</label><input name="student" maxlength="28" size="28" id="student" required="" type="text"><br>
+			<label for="email" style="font-weight:bold" class="idSpan">Email:</label><input name="email" maxlength="28" size="28" id="email" required="" type="text"><br>
+			
+			<label for="age" name="age" style="font-weight:bold" class="idSpan">Age:</label>
+				<input value="&lt; 18" name="age" type="radio"><label>&lt;&nbsp;18</label>
+				<input value="18-25" name="age" checked="checked" type="radio"><label>18-25</label>
+				<input value="26-40" name="age" type="radio"><label>26-40</label>
+				<input value="41-65" name="age" type="radio"><label>41-65</label>
+				<input value="65+" name="age" type="radio"><label>65+</label><br>
+			<h2>Academic Information</h2><br>
+			<label for="goals" name="goals" style="font-weight:bold" class="idSpan">Goals:</label>Check all that apply<br>
+			<div class="indent">
+				<input value="AA" name="goals" type="checkbox"><label>Associate Degree</label>
+				<input value="CSU" name="goals" type="checkbox"><label>Transfer to CSU</label>
+				<input value="UC" name="goals" type="checkbox"><label>Transfer to UC</label>
+				<input value="Personal" name="goals" type="checkbox"><label>Personal Enrichment</label><br>
+			</div>
+
+			<label for="academic_field" name="academic_field" style="font-weight:bold" class="idSpan">Fields of Study:</label>Select all that apply; hold CTRL when clicking to select multiple items<br>
+			<select size="6" class="indent">
+				<option>Accounting</option>
+				<option>Astronomy</option>
+				<option>Business</option>
+				<option>Chemistry</option>
+				<option>Computer/Information Technology</option>
+				<option>Health</option>
+				<option>Language Arts</option>
+				<option>Mathematics</option>
+				<option>Physical Education</option>
+				<option>Psychology</option>
+				<option>Sociology</option>
+				<option>Theatre Arts</option>
+			</select><br>
+
+			<label for="comments" style="font-weight:bold" class="idSpan">Comments:</label><textarea name="comments" rows="5" cols="50"></textarea><br>
+			<button id="btn1">Send Data</button>
+			<button id="btn2">Reset Form</button>
+		</form>
+	</body>
+</html>

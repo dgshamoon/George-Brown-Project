@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en-us">
+	<head>
+		<title>My gblearn</title>
+		<meta charset="utf-8">
+		<meta name="discription" content="danial's lab manual5">
+		<meta name="keywords" content="george brown,collage ">
+		<meta name="danial gheshe shamoon" content="danial.ghesheshamoon@georgebrown.ca">
+		<style>
+		
+			#wrapper {
+		
+		border-width:1px;
+		border-style: dashed;
+		border-color:red;
+		width: 960px;
+		margin: 0 auto;
+			}
+		
+			#mainHeader{
+		background-color:#9966ff;
+		height:100px;
+			}
+			#mainHeader h1{
+				margin: 0;
+				}
+			#mainMenu{
+		background-color:#9966ff;
+		height:40px;
+			}
+		
+			#mainSection{
+		background-color:#f5f0ff;
+		padding:10px;
+			}
+		
+			
+			#footer{
+		background-color:#9966ff;
+		height:40px;
+			}
+			#mainMenu ul , #footer ul {
+		list-style-type:none;
+		margin:0;
+		padding:0;
+			}
+			 #mainMenu ul li, #footer ul li{
+		 display:inline;
+		 float:left;
+			 }
+			 #mainMenu ul li a, #footer ul li a{
+		display:block;
+		padding:10px 10px;
+			}
+			#mainMenu ul li a:hover, #footer ul li a:hover{
+		background-color:gray;
+			}
+			.table{
+				color: black;
+				background-color: #7aa3cc;
+				width: 100%:
+				text-align: center;
+				Border-collapse: collapse;
+				}
+			.table th{
+				color:red;
+				background-color: blue;
+				}
+			.table th,td,tr{
+				border: 2px solid green;
+				}
+			.table tr:nth-child(odd){
+				background-color: #7cc6ee;
+				}
+			.table tr:hover{
+				color: red;
+				}
+		</style>
+		
+	</head>
+	<body>
+	<div id="wrapper">
+	
+		<header id='mainHeader'>
+			<h1><a id='top'>danial gheshe shamoon</a></h1>
+			<h2>101041512-crn</h2>
+		</header>
+		
+		<nav id='mainMenu'>
+			<ul>
+				<li><a href="/comp1223/"> comp1223</a></li>
+				<li><a href="/comp1223/practice/">practice</a></li>
+				<li><a href="/comp1223/labs/">Labs</a></li>
+				<li><a href='/comp1223/assignments/'>Assignments</a></li>
+			</ul>
+		</nav>
+		
+		<section id='mainSection'>
+			<h1>Drawing a table<h1>
+		
+			<table>
+				<thead>
+					<tr>
+						<th>Column 1 Header</th>
+						<th>Column 2 Header</th>
+						<th>Column 3 Header</th>
+						<th>Column 4 Header</th>
+					</tr>	
+				</thead>
+				
+				<tbody>
+					<tr>
+						<td> First Row / First Column</td>
+						<td> First Row / second Column</td>
+						<td> First Row / third Column</td>
+						<td> First Row / fourth Column</td>
+					</tr>
+					
+					<tr>
+						<td> second Row / First Column</td>
+						<td> Second Row / second Column</td>
+						<td> Secondecond Row / third Column</td>
+						<td> Secondecond Row / fourth Column</td>
+					</tr>
+					
+					<tr>
+						<td> Third Row / First Column</td>
+						<td> Third Row / second Column</td>
+						<td> Third Row / third Column</td>
+						<td> Third Row / fourth Column</td>
+					</tr>
+				</tbody>	
+			</table>
+			
+			<hr>
+			
+			<h1>Table Attributes<h1>
+			
+				<table border='1'>
+					<thead>
+						<tr>
+							<th colspan='4'>Second Table</th>
+						</tr>
+					</thead>
+					<tbody>
+					
+						<tr>
+							<td colspan='4'>First Row / First Column</td>
+						</tr>
+						
+						<tr>
+							<td colspan='2'>Secound Row / First column</td>
+							<td colspan='2'>Secound Row / Secound column</td>
+						</tr>
+						
+						<tr>
+							<td> Third Row / First Column</td>
+							<td> Third Row / secound Column</td>
+							<td> Third Row / third Column</td>
+							<td> Third Row / fourth Column</td>
+						</tr>
+					</tbody>
+				</table>
+				
+				<hr>
+				
+				<h1>Styling a table</h1>
+				
+					<table class='table'>
+						<thead>
+							<tr>
+								<th colspan='4'>Third Table</th>
+							</tr>
+						</thead>
+						
+						<tbody>
+							<tr>
+								<td colspan='4'>First Row / First Column</td>
+							</tr>
+							
+							<tr>
+								<td colspan='2'>Secound Row / First column</td>
+								<td colspan='2'>Secound Row / Secound row</td>
+								
+							</tr>
+							
+							<tr>
+								<td colspan='3'>Third Row / First Coulmn</td>
+								<td colspan='1'>Third Row / Secound Coulmn</td>
+							</tr>
+							
+							<tr>
+								<td>Fourth Row / First coulmn</td>
+								<td>Fourth Row /secound coulmn</td>
+								<td rowspan='2'>Fourth Row / Third coulmn</td>
+								<td>Fourth Row / Fourth coulmn</td>
+							</tr>
+							
+							<tr>
+								<td>Fourth Row / First coulmn</td>
+								<td>Fourth Row / secound coulmn</td>
+								<td>Fourth Row / third coulmn</td>
+							</tr>
+						</tbody>
+					</table>
+								
+							
+					
+		</section>
+		
+		
+	
+		<footer id='footer'>
+			<ul>
+				<li><a href="/comp1223/"> comp1223</a></li>
+				<li><a href="/comp1223/practice/">practice</a></li>
+				<li><a href="/comp1223/lab/">Labs</a></li>
+				<li><a href='/comp1223/assignments/'>Assignments</a></li>
+			</ul>
+		</footer>
+			<p>&copy; 2013-danial ghesheshamoon</p>
+		
+		<script src=http://my.gblearn.com/js/loadscript.js></script>
+	</div>
+		
+	</body>
+</html>
