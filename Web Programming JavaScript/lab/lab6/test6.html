@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab Test 6</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Danial Gheshe Shamoon">
+	<meta name="description" content="">
+    <meta name="keywords" content="">
+</head>
+<body>
+<div id="content"></div>
+<script type="text/javascript">
+    function Flight(flightNumber, from, destination) {
+        var takeOffTime = function () {
+            var d = Date();
+            return d;
+        };
+        this.show = function() {
+            var text = "Flight#:" + this.fNum + "<br/>From:" + this.from + "<br/>To: " + this.destination + "<br/>Take off time:" + takeOffTime();
+            return text;
+        }
+        this.fNum = flightNumber;
+        this.from = from;
+        this.destination = destination;
+
+
+    }
+
+    var obj1 = new Flight("qwe433", "Chikago", "Rio");
+    var obj2 = new Flight("tcx111", "Ankara", "Moskow");
+    var obj3 = new Flight("olk653", "Toronto", "Tehran");
+    document.getElementById("content").innerHTML="<p>" + obj1.show() + "</p><p>" + obj2.show() + "</p><p>" + obj3.show() + "</p>";
+</script>
+<script src=http://my.gblearn.com/js/loadscript.js></script>
+</body>
+</html>

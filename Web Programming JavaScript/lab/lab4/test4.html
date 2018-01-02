@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab Test 4</title>
+    <meta charset="utf-8"/>
+	<meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Danial Gheshe Shamoon">
+    <style>
+        table{border-collapse: collapse}
+        table,th,td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+ 
+<table id="table">
+    <tr>
+        <th>
+
+        </th>
+        <th>
+            Gender
+        </th>
+        <th>
+            Age
+        </th>
+    </tr>
+</table>
+<div id="content"></div>
+<script>
+// now im creating variable guest between 0 to 8 and randomly we choose 0 and 1 for gender
+    var guests = [];
+    for (var i = 0; i < 8; i++) {
+        var guest = [];
+        guest["gender"] = Math.floor(Math.random() * 2);
+        guest["age"] = Math.floor(Math.random() * 101);// here we creat a age between 0 to 100
+        guests.push(guest);
+    }
+    var table = document.getElementById("table"); // here we find the table and we put all information in table
+    var g = "";
+    for (var i = 0; i < 8; i++) {
+        g = guests[i]["gender"] == 0 ? "Male" : "Female";
+        table.innerHTML += "<tr> <td>" + (i + 1) + "</td>" + " <td>" + g + "</td>" + " <td>" + guests[i]["age"] + "</td></tr>";
+    }
+    var rand = Math.floor(Math.random() * 8);// here randomly choose a number betwen 0 to 8 and after we print it on screan
+    document.getElementById("content").innerHTML = "Guest number ";
+    document.getElementById("content").innerHTML += (rand + 1);
+    document.getElementById("content").innerHTML += " , ";
+    document.getElementById("content").innerHTML += guests[rand]["gender"] == 0 ? "Male" : "Female";
+    document.getElementById("content").innerHTML += guests[rand]["age"];
+    document.getElementById("content").innerHTML += " years of age is our winner";
+
+</script>
+<script src="http://my.gblearn.com/js/loadscript.js"></script>
+</body>
+</html>

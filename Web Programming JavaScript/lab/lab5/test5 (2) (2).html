@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab Test 5</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="danial gheshe shamoon">
+	<meta name='keyword' content='Javascript'>
+	<meta name='description' content='Focus on fundamentals of a web application'>
+</head>
+<body>
+
+<script type="text/javascript">
+  var str = prompt("Enter student Id");// here we get a student id 
+    document.getElementById("studentId").innerText = str;
+    //our loop starts here 
+	for (var i = 0; i < str.length; i++) {
+        displayStars(str.charAt(i));
+    }
+    function displayStars(id) {
+        document.write("<br/>");
+        for (var j = 0; j < parseInt(id); j++) {
+            document.write("*");
+        }
+    }
+</script>
+<!--    <script src="http://my.gblearn.com/js/loadscript.js"></script>-->
+
+<h3 id="studentId"></h3>
+</body>
+</html>

@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab Test 2</title>
+    <meta charset="utf-8"/>
+    <meta name="description" content="COMP1231, TEST2">
+    <meta name="keyword" content="LABTEST2,JAVASCRIPT,">
+    <meta name="danial gheshe shamoon" content="danial.ghesheshamoon@georgebrown..ca">
+</head>
+<body>
+<style>
+    .colorfull { color: blue; }
+</style>
+<h3>Lab test 2 by danial gheshe shamoon</h3>
+<div id="content"></div>
+<script type="text/javascript">
+    //checking for a valid number. done by s6041512
+    
+	do{
+		var x= Number(prompt("Please enter a number greater than 0: ", 4));
+    }while (x < 0 || x >= 10) {
+        
+    }
+    do{
+		var y = Number(prompt("Please enter a number greater than the first number:: " ));
+    }while (y <= x) {
+        
+    }
+		var content = document.getElementById("content");
+    for (var j = 0; j < x; j++) {
+        for (var i = 0; i < y; i++) {
+            content.innerHTML += "*";
+        }
+        content.innerHTML += "<ul>";
+        
+        for (var i = 1; i <= x; i++) {
+           
+            if (i % 2 > 0)
+                content.innerHTML += '<li class="colorfull">' + i + "</li>";
+            else
+                content.innerHTML += '<li>' + i + "</li>";
+        }
+        content.innerHTML += "</ul>";
+    }
+
+</script>
+<script src="http://my.gblearn.com/js/loadscript.js"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en-us">
+	<head>
+		
+		<title>PreLab2</title>
+		<meta charset='utf-8'>
+		<meta name='description' content='Focus on fundamentals of a web application'>
+		<meta name='keyword' content='JavaDcript'>
+		<meta name='author' content='danial gheshe shamoon'>
+		
+		
+		<style>
+
+		#div1 {
+				float : left;
+				width: 30%;
+
+			}
+		#div2 {
+			float : left;
+			width: 30%;
+
+		}
+		
+		 </style>
+	</head>
+	
+	
+	<body>
+	
+		
+		<div id="div1"></div>
+		<div id="div2"></div>
+		
+		
+		<script type="text/javascript" >
+		    
+			var  EnterNumber ;
+			var ALLlist = new Array();
+			
+			var unorderList ;
+			
+			EnterNumber = Number(prompt("Deteriment how many element your array want to have "))
+				
+				if ((isNaN(EnterNumber)) ||  (EnterNumber < 1 ))
+				{
+					alert("No characters and only number less than 1 is allowed.  by defult array lenght will be 50")
+					EnterNumber=50
+				}
+				
+			
+			unorderList = "<ul>" ;
+			for ( var i = 0 ; i < EnterNumber; i++)
+			{ 
+				ALLlist[i]=parseInt(Math.random() * 10)  ;
+				//document.write(ALLlist[i] + "<br/>");		
+				unorderList += "<li>"+ ALLlist[i] +"</li>"  ;	
+			}
+			unorderList += "</ul>" ;
+			
+			document.getElementById("div1").innerHTML = unorderList;
+
+
+
+			var smallest = ALLlist[0];
+			var largest = ALLlist[0];
+			var sum = 0;
+			var sumOdd = 0;
+			var sumEven = 0;
+
+			for(var i = 0 ; i<ALLlist.length; i++){
+
+				sum +=ALLlist[0];
+
+				if ( ALLlist[i] % 2 == 0)
+
+				{
+					sumEven += ALLlist[i];
+				}
+
+				else
+				{
+					sumOdd += ALLlist[i];
+				}
+
+
+				if(smallest > ALLlist[i])
+					smallest = ALLlist[i];
+
+				if(largest < ALLlist[i])
+					largest = ALLlist[i];
+			}
+
+			var myString= "Smallet Number: "+ smallest+
+							"<br>Largest Number: "+largest+
+							"<br>Sum : "+sum+
+							"<br>Odd Sum: "+sumOdd+
+							"<br>Even Sum: "+sumEven;
+
+			document.getElementById("div2").innerHTML = myString;
+
+
+			
+		</script>
+		
+		
+	
+	<script src=http://my.gblearn.com/js/loadscript.js></script>
+	</body>
+</html>

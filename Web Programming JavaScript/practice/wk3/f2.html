@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>javascript practise week 3</title>
+</head>
+<body>
+<h3>
+    prove you&apos;re Human
+</h3>
+<div id="content"></div>
+<script type = "text/javascript">
+
+    var response, ran_num, write_to_screan
+
+    response=confirm("do you wish to view this page?");
+    if (response) {
+
+        ran_num = prompt('please enter a number betwen 1 to 3');
+
+        switch (ran_num) {
+            case "1":
+                write_to_screan =
+                        "You have chosen to view this page and have earned a gold medal";
+                break;
+
+            case "2" :
+                write_to_screan =
+                        "you have chosen to view this page and have earned a silver medal";
+                break;
+
+            case "3" :
+                write_to_screan =
+                        " you have chosen to view this page and have earned a bronze medal";
+                break;
+
+            default:
+                write_to_screan =
+                        "you have chosen to view this page and have entered an invalid number";
+
+                break;
+        }
+
+         }
+        else {
+        write_to_screan=
+                "you have not chosen to view this page"
+    }
+
+    document.getElementById('content').innerHTML = write_to_screan;
+</script>
+</body>
+</html>

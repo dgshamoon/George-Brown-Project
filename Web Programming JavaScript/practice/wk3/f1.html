@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>javascript practice week 3</title>
+</head>
+<body>
+<h3>
+    My grades
+</h3>
+<div id = "content"></div>
+
+<script type = "text/javascript">
+   var calss_name, class_grade_num, class_grade_let, to_write
+
+    class_name = prompt('please enter the class name');
+    class_grade_num = prompt('please enter your grade for the ' + class_name + 'class');
+
+   // using if/ else if statement, assign the variable letter class_grade_let to meet the fowlowing condition
+    if(class_grade_num == 100){
+         class_grade_let == 'A+';
+    }
+    else if(class_grade_num == 90){
+         class_grade_let == 'A';
+    }else if(class_grade_num == 80){
+         class_grade_let == 'B';
+    }else if(class_grade_num == 70){
+         class_grade_let == 'C';
+    }else if(class_grade_num == 60){
+         class_grade_let == 'D';
+    }else if(class_grade_num == 50 && 59){
+         class_grade_let == 'D';
+    }else{
+         class_grade_let == 'F';
+    }
+    to_write ='i tooke the class ' + class_name + 'and earned a grade of ' + class_grade_let ;
+    to_write +='i recived a mark of ' + class_grade_num + 'in it';
+
+    document.getElementById('content').innerHTML = to_write;
+
+</script>
+</body>
+</html>

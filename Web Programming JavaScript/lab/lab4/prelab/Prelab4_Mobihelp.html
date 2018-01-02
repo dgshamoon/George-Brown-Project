@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>   
+		<meta charset="UTF-8">
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta name="author" content="danial gheshe shamoon">
+		<title>Prelab 4</title>
+		<style>
+			#rightAlign{
+				text-align:right;
+				border:0px;
+			}
+			#leftAlign{
+				border:0px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Bugs on a wire</h1>
+		<div id='content'></div>
+		<script>
+			var wire = prompt('Enter wire length');
+			wire = parseInt(wire);
+			var bugs = [];
+			var count = 0;
+			var count1 = 0;
+			var min = wire;
+			for(i=0;i<6;i++){
+				bugs[i] = i;
+			}
+			var bug = [];
+			var write = '<table border="1">';
+			write += '<tr>';
+				write += '<td>' + '<b>Type</b>' + '</td>';
+				write += '<td>' + '<b>x-Coordinate</b>' + '</td>';
+			write += '</tr>';
+			for(i in bugs){
+				bug["type"] = Math.random();
+				if(bug["type"] <= 0.3){
+					bug["type"] = 'spider';
+				}
+				else{
+					bug["type"] = 'roach';
+				}
+				bug["xcoord"] = Math.floor((Math.random() * wire) + 0);
+				write += '<tr>';
+				write += '<td id="leftAlign">' + (bugs[i] = bug["type"]) + '</td>';
+				write += '<td id="rightAlign">' + (bug[i] = bug["xcoord"]) + '</td>';
+				write += '</tr>';
+			}
+			write += '</table>';
+			for(i in bugs){
+				if(bugs[i] == 'roach'){
+					count++
+				}
+				else{
+					count1++	
+				}
+			}
+			for(i in bugs){
+				if(bug[i] < min){
+					min = bug[i];
+				}					
+			}
+			for(i in bugs){
+				if(bug[i] == min){
+					type = bugs[i];
+				}
+			}
+			write += '<b>Min: ' +  min + ', </b>';
+			write += '<b>Type: ' + type + '</b>';
+			write += '<br>';
+			write += '<b>Roaches: ' + count + ', </b>';
+			write += '<b>Spiders: ' + count1 + '</b>';
+			document.getElementById('content').innerHTML = write;
+		</script>
+	</body>
+</html>

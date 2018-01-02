@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="prelab2">
+		<meta name="keywords" content="HTML, JavaScript">
+		<meta name="author" content="danial gheshe shamoon">
+		<title>Prelab2 Ex2</title>		
+	</head>
+	<body>
+		<h1>Prelab2 Ex2</h1>
+		<div id="table"><div>	
+		<script>
+			var row;
+			var column;
+			var table;
+			var temp;
+
+			//validating to ensure user input includes positive numbers only
+			do{
+				row = Number(prompt("Enter the number of rows:"));
+				if (isNaN(row)){
+					alert("No characters allowed. Please try again.")
+				} else if (row == ""){
+					alert("Row field cannot be zero, space, or empty. Please try again.")
+					
+				} else if (row < 0){
+					alert("Only positive numbers are allowed. Please try again.");	
+				}
+			} while (isNaN(row) || row == "" || row <= 0);
+			
+			do{
+				column = Number(prompt("You entered " + row + " rows. Now enter the number of columns:"));
+				if (isNaN(column)){
+					alert("No characters allowed. Please try again.")
+				} else if (column == ""){
+					alert("Column field cannot be zero, space, or empty. Please try again.")
+				} else if (column < 0){
+					alert("Only positive numbers are allowed. Please try again.");
+				}
+			} while (isNaN(column) || column == "" || column <= 0);
+			//end of validation
+			
+			//this variable is what displays the result in document
+			table = document.getElementById("table");
+			//this variable creates the table tag & eventually appends it in the div tag
+			temp = "<table border = 1; style = 'font-weight: bold; border-collapse: collapse'>";
+			
+			for (r = 1; r <= row; r++){ //outer loop to create rows
+				temp += "<tr>";
+					for (c = 1; c <= column; c++){ //inner loop to create columns
+						temp += "<td height = '20'; width  = '40'>" + r * c + "</td>";
+					}
+				temp += "</tr>";
+			}
+			temp += "</table>"; 
+			table.innerHTML = temp;		
+		</script>
+		<script src=”http://my.gblearn.com/js/loadscript.js”></script>
+	</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>prelab 6</title>
+	<meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="Danial Gheshe Shamoon">
+</head>
+<body>
+<script>
+    var Wizard = function ( name, spell )
+    {
+        this.name= name ;
+        this.spell = spell ;
+        this.castSpell = function()
+        {
+            var v = Math.random();
+
+            if (v >= 0.5)
+            {
+                document.write(this.name + ":" + this.spell[0]);
+
+            } else
+            {
+                document.write(this.name + ":" + this.spell[1]);
+
+            }
+        }
+    }
+
+    var w = new Wizard("Gorrok", ["abracadabra" , "cadabraabra"]);
+
+    w.castSpell();
+
+</script>
+
+</body>
+</html>

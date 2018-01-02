@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Lab Test 3</title>
+    <meta charset="utf-8"/>
+	<meta name='description' content='Focus on fundamentals of a web application'>
+	<meta name='keyword' content='JavaDcript'>
+    <meta name="danial gheshe shamoon" content="Danial.ghesheshamoon@georgebrown.ca">
+</head>
+<body>
+<script>
+    var studentId = [1, 0, 4, 5, 2];
+    var printText = "<p>" + studentId + "</p>";
+    var randomNumber;
+    var generatedNumbers = [];
+    var i = 0;
+    while (i < 20) {
+        randomNumber = Math.floor(Math.random() * 20);
+        generatedNumbers[i] = randomNumber;
+        i++;
+    }
+    generatedNumbers.sort(function(a, b) { return a - b });
+    printText = printText + "<p>" + generatedNumbers + "</p>";
+    i = 0;
+    while (i < studentId.length) {
+        if (generatedNumbers.indexOf(studentId[i]) < 0) {
+            i++;
+            continue;
+        }
+        printText = printText + "<p>" + studentId[i] + " was found in the random array </p>";
+        i++;
+    }
+    document.write(printText);
+</script>
+<script src="http://my.gblearn.com/js/loadscript.js"></script>
+</body>
+</html> 
