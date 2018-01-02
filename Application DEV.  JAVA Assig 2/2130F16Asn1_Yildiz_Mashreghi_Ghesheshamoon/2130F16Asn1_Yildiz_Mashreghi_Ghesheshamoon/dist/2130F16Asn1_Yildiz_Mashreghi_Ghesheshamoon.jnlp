@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="2130F16Asn1_Yildiz_Mashreghi_Ghesheshamoon.jnlp">
+  <information>
+    <title>2130F16Asn1_Yildiz_Mashreghi_Ghesheshamoon</title>
+    <vendor>Mehdi</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="2130F16Asn1_Yildiz_Mashreghi_Ghesheshamoon.jar" size="26326" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="2130F16Asn1_Yildiz_Mashreghi_Ghesheshamoon" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="pkg2130f16asn1_yildiz_mashreghi_ghesheshamoon.Main"  name="2130F16Asn1_Yildiz_Mashreghi_Ghesheshamoon" />
+  <update check="always"/>
+</jnlp>
